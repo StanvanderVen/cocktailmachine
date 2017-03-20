@@ -1,6 +1,9 @@
 Software on Raspberry PI (Raspbian, Linux 4.4):
-sudo apt install arduino apache2 php5 libapache2-mod-php5 mysql-server mysql-client php5-mysql phpmyadmin pure-ftp --fix-missing
+$ sudo apt install arduino apache2 php5 libapache2-mod-php5 mysql-server mysql-client php5-mysql phpmyadmin pure-ftp --fix-missing
 
 To enable serial COM and SSH:
-sudo raspi-config
+$ sudo raspi-config
 Navigate to Interfacing and enable SSH and Serial (only the second option)
+
+Enable proper Arduino communication (genuine: ttyACM0, Chinese rip-off: ttyUSB0):
+$ stty -F /dev/ttyACM0 cs8 9600 ignbrk -brkint -icrnl -imaxbel -opost -onlcr -isig -icanon -iexten -echo -echoe -echok -echoctl -echoke noflsh -ixon -crtscts -hupcl
