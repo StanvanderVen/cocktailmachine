@@ -9,29 +9,7 @@
 		or die (mysql_error());
 
 		mysql_select_db("drinks");
-
-			
-			
-			$sql = "
-			SELECT Namedrink FROM drinktable;
-			";
-			
-			$result = mysql_query($sql)
-			echo "<ul>";
-			
-			while($row = mysqli_fetch_array($result))
-			{
-				echo"<li>".$row['Namedrink']."</li>";
-			}
-			echo "</ul>";
-			
-			while($row = mysqli_fetch_array($result))
-			{
-				echo"<option>".$row['Namedrink']."</option>";
-			}
-			
-
-		
+	
 		?>
 			
 	</head> 
@@ -57,45 +35,64 @@
 						<li class="table_line"><input type="text" size="20" name="name_cocktail"></li>
 						<li class="table_line">
 							<select name="ingredient1">
+								<option selected>Choose</option>
 								<?php
-									while($row = mysqli_fetch_array($result))
+									$query = "SELECT * FROM drinkstable"; //You don't need a ; like you do in SQL
+									$result = mysql_query($query);
+									while($row = mysql_fetch_array($result))
 									{
-										echo"<option>".$row['Namedrink']."</option>";
+										
+										echo "<option>" . $row['Namedrink'] . "</option>";
 									}
+									
 								?>
+								<option>Empty</option>
+								
 							</select>
+							
+							
 						</li>
 						<li class="table_line">
 							<select name="ingredient2">
+								<option selected>Choose</option>
 								<?php
-									while($row = mysqli_fetch_array($result))
+									$query = "SELECT * FROM drinkstable"; //You don't need a ; like you do in SQL
+									$result = mysql_query($query);
+									while($row = mysql_fetch_array($result))
 									{
-										echo"<option>".$row['Namedrink']."</option>";
+										
+										echo "<option>" . $row['Namedrink'] . "</option>";
 									}
+									
 								?>
+								<option>Empty</option>
 							</select>
 						</li>
 						<li class="table_line">
 							<select name="ingredient3">
+								<option selected>Choose</option>
 								<?php
-									while($row = mysqli_fetch_array($result))
+									$query = "SELECT * FROM drinkstable"; //You don't need a ; like you do in SQL
+									$result = mysql_query($query);
+									while($row = mysql_fetch_array($result))
 									{
-										echo"<option>".$row['Namedrink']."</option>";
+										
+										echo "<option>" . $row['Namedrink'] . "</option>";
 									}
+									
 								?>
+								<option>Empty</option>
 							</select>
 						</li>
-						<!-- <li class="table_line"><input type="text" size="20" name="bottle_size"></li> 
-						<li class="table_line"><input type="text" size="20" name="alcohol_percentage"></li>
-						<li class="table_line"><input type="text" size="20" name="bottle_price"></li>
-						<li class="table_line"><input type="submit" value="Add"></li> -->
+						
 					</ul>
 					
 					<ul class="table3">
 						<li class="table_line">&nbsp</li>
-						<li class="table_line"><input type="text" size="20" name="Amount1"> ml</li>
-						<li class="table_line"><input type="text" size="20" name="Amount2"> ml</li>
-						<li class="table_line"><input type="text" size="20" name="Amount3"> ml</li>				
+						<li class="table_line"><input type="text" size="20" name="amount_1"> ml</li>
+						<li class="table_line"><input type="text" size="20" name="amount_2"> ml</li>
+						<li class="table_line"><input type="text" size="20" name="amount_3"> ml</li>	
+						<li class="table_line"><input type="submit" value="Add"></li>
 					</ul>
 			
 

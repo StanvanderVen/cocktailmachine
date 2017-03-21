@@ -33,16 +33,12 @@
 				<ul class="table">
 				<li><li>
 				</ul>
-				
-				
-			 
-			
-				
-				</form> 
+				</form>
+
+<a href="drink_list.php">Click here to see the drinks list</a>				
 			</div>
 			</div>
 		</div>
 		
-		<?php include "POI_FOOTER.php"; ?>
 	</body> 
 </html>
