@@ -7,6 +7,7 @@ Navigate to Interfacing and enable SSH and Serial (only the second option)
 
 Enable proper Arduino communication (genuine: ttyACM0, Chinese rip-off: ttyUSB0):
 $ stty -F /dev/ttyACM0 cs8 9600 ignbrk -brkint -icrnl -imaxbel -opost -onlcr -isig -icanon -iexten -echo -echoe -echok -echoctl -echoke noflsh -ixon -crtscts -hupcl
+$ chmod 666 /dev/ttyACM0
 
 Write to Arduino:
 $ echo -n "h;" > /dev/ttyACM0

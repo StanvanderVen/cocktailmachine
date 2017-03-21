@@ -1,0 +1,4 @@
+http://playground.arduino.cc/Interfacing/LinuxTTY
+https://askubuntu.com/questions/210177/serial-port-terminal-cannot-open-dev-ttys0-permission-denied
+http://www.instructables.com/id/Control-an-Arduino-with-PHP/step3/Touching-the-serial-port-in-PHP/
+https://salilkapur.wordpress.com/2013/03/08/communicating-with-arduino-using-c/
