@@ -3,28 +3,22 @@
 		<title>Cocktail toevoegen</title>
 		
 		<?php 
-		@mysql_connect("localhost", "pimspanjer_arte", "3ayLkCTba")
+		@mysql_connect("localhost", "root", "debollevanplus")
 		or die (mysql_error());
 
 		mysql_select_db("pimspanjer_arte");
 		
 		
-			$name = mysql_real_escape_string($_POST["name"]);
-			$soort = mysql_real_escape_string($_POST["soort"]); 
-			$geslacht = mysql_real_escape_string($_POST["geslacht"]);
-			$voornaam = mysql_real_escape_string($_POST["voornaam"]);
-			$achternaam = mysql_real_escape_string($_POST["achternaam"]);
-			$adres = mysql_real_escape_string($_POST["adres"]);
-			$wachtwoord = mysql_real_escape_string($_POST["wachtwoord"]);
-			$wachtwoordcheck = mysql_real_escape_string($_POST["check"]);
-			$email = mysql_real_escape_string($_POST["email"]);
-
-			
+			$name_cocktail = mysql_real_escape_string($_POST["name"]);
+			$ingredient1 = mysql_real_escape_string($_POST["ingredient1"]); 
+			$ingredient2 = mysql_real_escape_string($_POST["ingredient2"]);
+			$ingredient1 = mysql_real_escape_string($_POST["ingredient3"]);
+						
 			$sql = "
 
-			INSERT INTO Accounts(Username, Password, First, Last, Adres, Email) 
+			INSERT INTO cocktailtable(Namecocktail, Ingredient1, Ingredient2, Ingredien3) 
 
-			VALUE('".$username."', '".$wachtwoord."', '".$voornaam."', '".$achternaam."', '".$adres."', '".$email."')
+			VALUE('".$name_cocktail."', '".$ingredient1."', '".$ingredient2."', '".$ingredient3."')
 			";
 
 
@@ -39,13 +33,12 @@
 				<h4>De account is aangemaakt. Je ingevulde registratie-gegevens zijn:</h4><br>
 				<?php 
 		
-					echo $soort . "<br />";
-					echo $geslacht . "<br />";
-					echo $voornaam . " ";
-					echo $achternaam . "<br />";
-					echo $adres . "<br />";
+					echo $name_cocktail . "<br />";
+					echo $ingredient1 . "<br />";
+					echo $ingredient2 . " ";
+					echo $ingredient3 . "<br />";
 				?>
-				<br><br><h4>Klik <a href="POI_main.php">HIER</a> om terug te gaan naar de beginpagina</h4>
+				<br><br><h4><a href="add_cocktail.php">Click here to add another cocktail</a></h4>
 			</div>
 	</div> 
 	

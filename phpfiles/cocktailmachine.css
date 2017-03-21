@@ -9,6 +9,13 @@
 	display:inline-block;
 	float:left;
 	vertical-align: top;
+	width: 15%;
+	list-style-type:none;
+}
+.table3 {
+	display:inline-block;
+	float:left;
+	vertical-align: top;
 	width: 20%;
 	list-style-type:none;
 }
