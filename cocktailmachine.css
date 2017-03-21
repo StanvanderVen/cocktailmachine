@@ -1,0 +1,27 @@
+.table {
+	display:inline-block;
+	float:left;
+	vertical-align: top;
+	width: 10%;
+	list-style-type:none;
+}
+.table2 {
+	display:inline-block;
+	float:left;
+	vertical-align: top;
+	width: 15%;
+	list-style-type:none;
+}
+.table3 {
+	display:inline-block;
+	float:left;
+	vertical-align: top;
+	width: 20%;
+	list-style-type:none;
+}
+.table_line {
+	height:30px;
+}
+h1{
+	margin-left:2.5%;
+}
