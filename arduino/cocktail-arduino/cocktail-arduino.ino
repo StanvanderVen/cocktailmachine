@@ -7,7 +7,7 @@ int timeE;
 int timeF;
 int timeG;
 int amountIngredients = 0;
-int IngredientsAdded = 0;
+int ingredientsAdded = 0;
 
 
 void setup() {
@@ -37,8 +37,8 @@ void loop() {
        }
         
         
-        while(IngredientsAdded < amountIngredients) {
-          int i = 0;
+        while(ingredientsAdded < amountIngredients) {
+          int i = ingredientsAdded;
           switch (DrinkCode[i]) {
             case 'A':
                 timeA = (DrinkCode[i+1]-48)*100 + (DrinkCode[i+2]-48)*10 + DrinkCode[i+3]-48;
@@ -58,13 +58,23 @@ void loop() {
             case 'F':
               timeF = (DrinkCode[i+1]-48)*100 + (DrinkCode[i+2]-48)*10 + DrinkCode[i+3]-48;
             break;
-          case 'G':
+            case 'G':
               timeG = (DrinkCode[i+1]-48)*100 + (DrinkCode[i+2]-48)*10 + DrinkCode[i+3]-48;
             break;
           };
+          ingredientsAdded = ingredientsAdded + 3;
         }
    }
-}
+
+
+
+
+
+
+
+
+
+ }
 
  
 
