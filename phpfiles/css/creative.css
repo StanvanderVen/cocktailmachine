@@ -568,3 +568,38 @@ body {
 .payments {
 	font-size: 1.5em;	
 }
+
+.table {
+	display:inline-block;
+	float:left;
+	vertical-align: top;
+	width: 10%;
+	list-style-type:none;
+}
+.table2 {
+	display:inline-block;
+	float:left;
+	vertical-align: top;
+	width: 15%;
+	list-style-type:none;
+}
+.table3 {
+	display:inline-block;
+	float:left;
+	vertical-align: top;
+	width: 20%;
+	list-style-type:none;
+}
+
+.table4 {
+	display:inline-block;
+	float:left;
+	vertical-align: top;
+	width: 5%;
+	list-style-type:none;
+	border:1px solid black;
+}
+
+.table_line {
+	height:30px;
+}
