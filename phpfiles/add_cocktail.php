@@ -94,9 +94,11 @@
 						<li class="table_line"><input type="text" size="20" name="amount_3"> ml</li>	
 						<li class="table_line"><input type="submit" value="Add"></li>
 					</ul>
-			
-
-					</form> 
+					</form>
+					
+					<a href="cocktail_list.php">Click here to see cocktail list</a><br>
+					<a href="add_drink.php">Click here to add drinks</a>
+					
 				</div>
 			</div>
 		</div>
