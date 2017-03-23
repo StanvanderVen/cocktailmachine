@@ -58,7 +58,7 @@
 					<li>
 						<a class="page-scroll" href="#contact">Contact</a>
                     </li>
-                    
+      
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -67,7 +67,7 @@
     </nav>
 
 	
-    <header>
+     <header>
         <div class="header-content">
 				<div class="header-content-inner">
 					<div class="container-fluid">	
@@ -80,129 +80,12 @@
 		</div>
     </header>
 
+<section>
+	<div>	
+		<?php include "add_cocktail_code.php"?>
+	</div>
+</section>
 
-<div class="container-fluid">	
-	<hr>
-	<html>
-	<head>
-		<title>Add cocktail</title>
-		<link rel="stylesheet"type="text/css" href="cocktailmachine.css">
-		
-		
-		<?php 
-		@mysql_connect("localhost", "root", "debollevanplus")
-		or die (mysql_error());
-
-		mysql_select_db("drinks");
-	
-		?>
-			
-	</head> 
-	
-	<body> 
-		<div class="container-fluid">	
-			<div id="left">
-				<div class="col-lg-12 text-center">
-				<form name="form" method="post" action="add_cocktail_post.php"> 
-					<h1 id="homeHeading">Add a cocktail</h1>
-					<div>
-						&nbsp;
-					</div>
-					<div>
-						&nbsp;
-					</div>
-					
-					<div class="form-group row">
-						<label for="example-text-input">Name: </label>
-						<placeholder="Enter Name">
-						<div class="col-10">
-    <input class="form-control" type="text" value="Artisanal kale" id="example-text-input">
-  </div>
-					</div>
-					
-					
-					
-					
-					
-					<ul class="list-group row">
-						<li class="list-group-item">Name: 		</li>
-						<li class="list-group-item">Ingredient 1 </li>
-						<li class="list-group-item">Ingredient 2 </li>
-						<li class="list-group-item">Ingredient 3 </li>
-					</ul>
-					
-					<ul class="list-group row">
-						<li class="list-group-item"><input type="text" size="20" name="name_cocktail"></li>
-						<li class="list-group-item">
-							<select name="ingredient1">
-								<option selected>Choose</option>
-								<?php
-									$query = "SELECT * FROM drinkstable"; //You don't need a ; like you do in SQL
-									$result = mysql_query($query);
-									while($row = mysql_fetch_array($result))
-									{
-										
-										echo "<option>" . $row['Namedrink'] . "</option>";
-									}
-									
-								?>
-								<option>Empty</option>
-								
-							</select>
-							
-							
-						</li>
-						<li class="list-group row">
-							<select name="ingredient2">
-								<option selected>Choose</option>
-								<?php
-									$query = "SELECT * FROM drinkstable"; //You don't need a ; like you do in SQL
-									$result = mysql_query($query);
-									while($row = mysql_fetch_array($result))
-									{
-										
-										echo "<option>" . $row['Namedrink'] . "</option>";
-									}
-									
-								?>
-								<option>Empty</option>
-							</select>
-						</li>
-						<li class="list-group row">
-							<select name="ingredient3">
-								<option selected>Choose</option>
-								<?php
-									$query = "SELECT * FROM drinkstable"; //You don't need a ; like you do in SQL
-									$result = mysql_query($query);
-									while($row = mysql_fetch_array($result))
-									{
-										
-										echo "<option>" . $row['Namedrink'] . "</option>";
-									}
-									
-								?>
-								<option>Empty</option>
-							</select>
-						</li>
-						
-					</ul>
-					
-					<ul class="list-group row">
-						<li class="list-group-item">&nbsp</li>
-						<li class="list-group-item"><input type="text" size="20" name="amount_1"> ml</li>
-						<li class="list-group-item"><input type="text" size="20" name="amount_2"> ml</li>
-						<li class="list-group-item"><input type="text" size="20" name="amount_3"> ml</li>	
-						<li class="list-group-item"><input type="submit" value="Add"></li>
-					</ul>
-					</form> 
-				</div>
-			</div>
-		</div>
-	</body> 
-</html>
-
-</div>
-	
 <footer>
     <div class="footer-bottom">
         <div class="container">
@@ -212,7 +95,6 @@
 			&nbsp;
 			<a class="page-scroll" href="#contact">Cocktail toevoegen</a> 
 		</div>
-    
 	
 	</footer> <!--/.footerbuttom-->
 
