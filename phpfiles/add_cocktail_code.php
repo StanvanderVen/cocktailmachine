@@ -5,24 +5,49 @@
 			<div> &nbsp </div>
 			<div> &nbsp </div>
 						<div class="form-group row">
-							<div class="col-md-4">
-								<label for="text1" class="col-2 col-form-label">Cocktail name:</label>
-							</div>
 							<div class="col-md-8">
+								<label for="text1" class="col-2 col-form-label">Cocktail name:</label>
 								<input type="text" size="20" name="name_cocktail" class="form-control" id="text1">
 							</div>
 						</div>	
 						
+						
 						<div class="form-group row">
-							<label for="ingredient1" class="col-2 col-form-label">-----------</label>
-							<div class="col-10">
-								<select class="form-control" name="ingredient1" id="ingredient1">
+							<div class = "col-md-8">
+								<label for="ingredient1" class="col-2 col-form-label">Ingredient 1</label>
+								<div class="col-10">
+									<select class="form-control" name="ingredient1" id="ingredient1">
+										<option selected>Choose</option>
+											<?php
+											$query = "SELECT * FROM drinkstable"; //You don't need a ; like you do in SQL
+											$result = mysql_query($query);
+													while($row = mysql_fetch_array($result))
+												{	
+													echo "<option>" . $row['Namedrink'] . "</option>";
+												}
+												
+											?>
+										<option>Empty</option>
+									</select>
+								</div>
+							</div>		
+						
+							<div class = "col-md-4">
+								<label for="text2" class="col-2 col-form-label">amount in ml</label>
+								<input type="text" size="20" name="amount_1" class="form-control" id="text2">
+							</div>
+						</div>
+								
+						<div class="form-group row">
+							<div class = "col-md-8">
+								<label for="ingredient2">-----------</label>	
+								<select class="form-control" name="ingredient2">
 									<option selected>Choose</option>
 										<?php
-										$query = "SELECT * FROM drinkstable"; //You don't need a ; like you do in SQL
-										$result = mysql_query($query);
-												while($row = mysql_fetch_array($result))
-											{	
+											$query = "SELECT * FROM drinkstable"; //You don't need a ; like you do in SQL
+											$result = mysql_query($query);
+											while($row = mysql_fetch_array($result))
+											{
 												echo "<option>" . $row['Namedrink'] . "</option>";
 											}
 											
@@ -30,51 +55,36 @@
 									<option>Empty</option>
 								</select>
 							</div>
-						</div>		
 							
-						<div class="form-group row">
-							<label for="ingredient2">-----------</label>	
-							<select class="form-control" name="ingredient2">
-								<option selected>Choose</option>
-									<?php
-										$query = "SELECT * FROM drinkstable"; //You don't need a ; like you do in SQL
-										$result = mysql_query($query);
-										while($row = mysql_fetch_array($result))
-										{
-											echo "<option>" . $row['Namedrink'] . "</option>";
-										}
-										
-									?>
-								<option>Empty</option>
-							</select>
+							<div class = "col-md-4">
+								<label for="text3" class="col-2 col-form-label">amount in ml</label>
+								<input type="text" size="20" name="amount_2" class="form-control" id="text3">
+							</div>
 						</div>
 						
 						<div class="form-group row">
-							<label for="ingredient3">-----------</label>
-							<select class="form-control" name="ingredient3">
-									<option selected>Choose</option>
-									<?php
-										$query = "SELECT * FROM drinkstable"; //You don't need a ; like you do in SQL
-										$result = mysql_query($query);
-										while($row = mysql_fetch_array($result))
-										{
+							<div class="col-md-8">
+								<label for="ingredient3">-----------</label>
+								<select class="form-control" name="ingredient3">
+										<option selected>Choose</option>
+										<?php
+											$query = "SELECT * FROM drinkstable"; //You don't need a ; like you do in SQL
+											$result = mysql_query($query);
+											while($row = mysql_fetch_array($result))
+											{
+												
+												echo "<option>" . $row['Namedrink'] . "</option>";
+											}
 											
-											echo "<option>" . $row['Namedrink'] . "</option>";
-										}
-										
-									?>
-								<option>Empty</option>
-							</select>
-						</div>						
-						
-						<!-- <ul class="table3">
-						<li class="table_line">&nbsp</li>
-						<li class="table_line"><input type="text" size="20" name="amount_1"> ml</li>
-						<li class="table_line"><input type="text" size="20" name="amount_2"> ml</li>
-						<li class="table_line"><input type="text" size="20" name="amount_3"> ml</li>	
-						<li class="table_line"></li>
-						</ul>
-						-->
+										?>
+									<option>Empty</option>
+								</select>
+							</div>
+							<div class = "col-md-4">
+								<label for="text4" class="col-2 col-form-label">amount in ml</label>
+								<input type="text" size="20" name="amount_3" class="form-control" id="text4">
+							</div>
+						</div>
 						
 						<div class="form-group center"> 
 							<div>
