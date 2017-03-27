@@ -11,7 +11,7 @@ int ingredientsAdded = 0;
 
 
 void setup() {
-        Serial.begin(115200);     // opens serial port, sets data rate to 9600 bps
+        Serial.begin(115200);     // opens serial port, sets data rate to 115200 bps
         pinMode(13, OUTPUT);
 }
 
@@ -21,7 +21,8 @@ void loop() {
    if (Serial.available() > 0) {
       DrinkCode = Serial.readStringUntil(';'); // read the incoming byte:
       Serial.readString();  //clears the remaining serial buffer after the ';'
-      //Serial.print(DrinkCode); //Sends a return to Rpi
+      Serial.print("input: ");
+      Serial.println(DrinkCode); //Sends a return to Rpi
 //      if (DrinkCode == "h") { //used for testing
 //        digitalWrite(13, HIGH);
 //      };
@@ -30,8 +31,8 @@ void loop() {
 //      };
         
         //checks the amount of ingredients that are used
-       for (int x = 0; x < 10; x=x+3) { //ten ingredients limit
-        if(DrinkCode[x] == 'A' || 'B' || 'C' || 'D' || 'E' || 'F' || 'G') { 
+       for (int x = 0; x < 11; x=x+3) { //ten ingredients limit
+        if(DrinkCode[x] == 'A') { 
             amountIngredients = amountIngredients + 1;
           }
        }
@@ -39,12 +40,18 @@ void loop() {
         
         while(ingredientsAdded < amountIngredients) {
           int i = ingredientsAdded;
+          Serial.print("The amount of ingredients added");
+          Serial.println(amountIngredients);
           switch (DrinkCode[i]) {
             case 'A':
                 timeA = (DrinkCode[i+1]-48)*100 + (DrinkCode[i+2]-48)*10 + DrinkCode[i+3]-48;
+                Serial.print("Time of drink A");
+                Serial.println(timeA);
               break;
             case 'B':
                 timeB = (DrinkCode[i+1]-48)*100 + (DrinkCode[i+2]-48)*10 + DrinkCode[i+3]-48;
+                Serial.print("Time of drink B");
+                Serial.println(timeB);
             break;
             case 'C':
               timeC = (DrinkCode[i+1]-48)*100 + (DrinkCode[i+2]-48)*10 + DrinkCode[i+3]-48;
@@ -62,7 +69,6 @@ void loop() {
               timeG = (DrinkCode[i+1]-48)*100 + (DrinkCode[i+2]-48)*10 + DrinkCode[i+3]-48;
             break;
           };
-          ingredientsAdded = ingredientsAdded + 3;
         }
    }
 

@@ -31,15 +31,7 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-	
-	<?php 
-		@mysql_connect("localhost", "root", "debollevanplus")
-		or die (mysql_error());
 
-		mysql_select_db("drinks");
-	
-		?>
-	
 </head>
 
 <body id="page-top">
@@ -61,12 +53,12 @@
                         <a class="page-scroll" href="#order">Cocktail bestellen</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href=add_cocktail.php>Cocktail toevoegen</a>
+                        <a class="page-scroll" href=add_cocktail_page.php>Cocktail toevoegen</a>
                     </li>
 					<li>
 						<a class="page-scroll" href="#contact">Contact</a>
                     </li>
-      
+                    
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -75,11 +67,12 @@
     </nav>
 
 	
-     <header>
+    <header>
         <div class="header-content">
+			
 				<div class="header-content-inner">
 					<div class="container-fluid">	
-						<h1 id="homeHeading">Dynamix</h1>
+						<h1 id="homeHeading">Dynamixe</h1>
 						<hr>
 						<p class ="main">Since 1888<p>
 						<a href="#order" class="btn btn-primary btn-xl page-scroll">Bestellen</a>
@@ -88,21 +81,105 @@
 		</div>
     </header>
 
-<section>
-	<div>	
-		<?php include "add_cocktail_code.php"?>
-	</div>
-</section>
+    <section id="order">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Cocktails</h2>
+                    <hr class="primary">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 text-center">
+                    <div class="service-box">
+                        <i class="fa fa-4x fa-glass text-primary sr-icons"></i>
+                        <h3>Long-island icetea</h3>
+                        <p class="text-muted">lekkor</p>
+						<div>
+							&nbsp;
+						</div>
+						<a href="#contact" class="btn btn-primary btn-xl page-scroll">Bestel</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 text-center">
+                    <div class="service-box">
+                        <i class="fa fa-4x fa-glass text-primary sr-icons"></i>
+                        <h3>bacardi-cola</h3>
+                        <p class="text-muted">nog lekkorer</p>
+						<div>
+							&nbsp;
+						</div>
+						<a href="#contact" class="btn btn-primary btn-xl page-scroll">Bestel</a>
+                    </div>
+                </div>
+				<div class="col-lg-4 col-md-6 text-center">
+                    <div class="service-box">
+                        <i class="fa fa-4x fa-glass text-primary sr-icons"></i>
+                        <h3>Gin-tonic</h3>
+                        <p class="text-muted">klajsfkosdj</p>
+						<div>
+							&nbsp;
+						</div>
+						<a href="#contact" class="btn btn-primary btn-xl page-scroll">Bestel</a>
+                    </div>
+                </div>
+                </div>
+				<div>
+							&nbsp;
+						</div>
+						<div>
+							&nbsp;
+						</div>
+				<div class="row">
+                <div class="col-lg-4 col-md-6 text-center">
+                    <div class="service-box">
+                        <i class="fa fa-4x fa-glass text-primary sr-icons"></i>
+                        <h3>Long-island icetea</h3>
+                        <p class="text-muted">lekkor</p>
+						<div>
+							&nbsp;
+						</div>
+						<a href="#contact" class="btn btn-primary btn-xl page-scroll">Bestel</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 text-center">
+                    <div class="service-box">
+                        <i class="fa fa-4x fa-glass text-primary sr-icons"></i>
+                        <h3>bacardi-cola</h3>
+                        <p class="text-muted">nog lekkorer</p>
+						<div>
+							&nbsp;
+						</div>
+						<a href="#contact" class="btn btn-primary btn-xl page-scroll">Bestel</a>
+                    </div>
+                </div>
+				<div class="col-lg-4 col-md-6 text-center">
+                    <div class="service-box">
+                        <i class="fa fa-4x fa-glass text-primary sr-icons"></i>
+                        <h3>Gin-tonic</h3>
+                        <p class="text-muted">klajsfkosdj</p>
+						<div>
+							&nbsp;
+						</div>
+						<a href="#contact" class="btn btn-primary btn-xl page-scroll">Bestel</a>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+	
 <footer>
     <div class="footer-bottom">
         <div class="container">
-			<a class="page-scroll" href="#contact">Contact</a>
-			&nbsp; 
-            <a class="page-scroll" href="#order"> Cocktail bestellen </a>
+			<a class="page-scroll" href="#order"> Cocktail bestellen </a>
 			&nbsp;
-			<a class="page-scroll" href="#contact">Cocktail toevoegen</a> 
+			<a class="page-scroll" href="add_cocktail_page.php">Cocktail toevoegen</a> 
 		</div>
+    
 	
 	</footer> <!--/.footerbuttom-->
 

@@ -31,15 +31,7 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-	
-	<?php 
-		@mysql_connect("localhost", "root", "debollevanplus")
-		or die (mysql_error());
 
-		mysql_select_db("drinks");
-	
-		?>
-	
 </head>
 
 <body id="page-top">
@@ -66,7 +58,7 @@
 					<li>
 						<a class="page-scroll" href="#contact">Contact</a>
                     </li>
-      
+                    
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -75,11 +67,12 @@
     </nav>
 
 	
-     <header>
+    <header>
         <div class="header-content">
+			
 				<div class="header-content-inner">
 					<div class="container-fluid">	
-						<h1 id="homeHeading">Dynamix</h1>
+						<h1 id="homeHeading">Dynamixe</h1>
 						<hr>
 						<p class ="main">Since 1888<p>
 						<a href="#order" class="btn btn-primary btn-xl page-scroll">Bestellen</a>
@@ -88,12 +81,13 @@
 		</div>
     </header>
 
-<section>
-	<div>	
-		<?php include "add_cocktail_code.php"?>
-	</div>
-</section>
+    <section>
+		<div class="container">
+	<?php include "add_drink.php"?>
+		</div>
+	</section>
 
+	
 <footer>
     <div class="footer-bottom">
         <div class="container">
@@ -103,6 +97,7 @@
 			&nbsp;
 			<a class="page-scroll" href="#contact">Cocktail toevoegen</a> 
 		</div>
+    
 	
 	</footer> <!--/.footerbuttom-->
 

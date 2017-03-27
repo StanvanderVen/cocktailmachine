@@ -32,14 +32,13 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 	
-	<?php 
+		<?php 
 		@mysql_connect("localhost", "root", "debollevanplus")
 		or die (mysql_error());
 
 		mysql_select_db("drinks");
 	
 		?>
-	
 </head>
 
 <body id="page-top">
@@ -61,7 +60,7 @@
                         <a class="page-scroll" href="#order">Cocktail bestellen</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href=add_cocktail.php>Cocktail toevoegen</a>
+                        <a class="page-scroll" href=add_cocktail_page.php>Cocktail toevoegen</a>
                     </li>
 					<li>
 						<a class="page-scroll" href="#contact">Contact</a>
@@ -74,23 +73,9 @@
         <!-- /.container-fluid -->
     </nav>
 
-	
-     <header>
-        <div class="header-content">
-				<div class="header-content-inner">
-					<div class="container-fluid">	
-						<h1 id="homeHeading">Dynamix</h1>
-						<hr>
-						<p class ="main">Since 1888<p>
-						<a href="#order" class="btn btn-primary btn-xl page-scroll">Bestellen</a>
-					</div>
-				</div>
-		</div>
-    </header>
-
 <section>
 	<div>	
-		<?php include "add_cocktail_code.php"?>
+		<?php include "add_cocktail_post_code.php"?>
 	</div>
 </section>
 
@@ -114,10 +99,10 @@
 
     <!-- Plugin JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-    <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
+    <!--<script src="vendor/scrollreveal/scrollreveal.min.js"></script>
     <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
 
-    <!-- Theme JavaScript -->
+     Theme JavaScript -->
     <script src="js/creative.min.js"></script>
 	
 

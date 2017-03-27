@@ -58,15 +58,14 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
 					<li>
-                        <a class="page-scroll" href="#order">Cocktail bestellen</a>
+                        <a class="page-scroll" href=index.php#order>Cocktail bestellen</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href=add_cocktail.php>Cocktail toevoegen</a>
+                        <a class="page-scroll" href="#add_cocktail">Cocktail toevoegen</a>
                     </li>
 					<li>
 						<a class="page-scroll" href="#contact">Contact</a>
                     </li>
-      
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -75,20 +74,10 @@
     </nav>
 
 	
-     <header>
-        <div class="header-content">
-				<div class="header-content-inner">
-					<div class="container-fluid">	
-						<h1 id="homeHeading">Dynamix</h1>
-						<hr>
-						<p class ="main">Since 1888<p>
-						<a href="#order" class="btn btn-primary btn-xl page-scroll">Bestellen</a>
-					</div>
-				</div>
-		</div>
+    <header>
     </header>
 
-<section>
+<section id = "add_cocktail">
 	<div>	
 		<?php include "add_cocktail_code.php"?>
 	</div>
@@ -99,15 +88,15 @@
         <div class="container">
 			<a class="page-scroll" href="#contact">Contact</a>
 			&nbsp; 
-            <a class="page-scroll" href="#order"> Cocktail bestellen </a>
+            <a class="page-scroll" href=index.php> Cocktail bestellen </a>
 			&nbsp;
-			<a class="page-scroll" href="#contact">Cocktail toevoegen</a> 
+			<a class="page-scroll" href="#add_cocktaol">Cocktail toevoegen</a> 
 		</div>
 	
 	</footer> <!--/.footerbuttom-->
 
     <!-- jQuery -->
-    <script src="vendor/jquery/jquery.min.js"></script>
+    <<script src="vendor/jquery/jquery.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
