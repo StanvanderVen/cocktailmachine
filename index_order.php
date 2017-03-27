@@ -142,8 +142,17 @@
 								&nbsp;
 							</div>
 							<div>
-									<input type="submit" name="order_cocktail" class = "btn btn-primary"></input>
+								<input type="submit" name="order_cocktail" class = "btn btn-primary" ></input>
+								<button class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">More information</button>
 							</div>
+						
+						<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+							<div class="modal-dialog modal-lg">
+								<div class="modal-content">
+									<?php echo $row['LongDescription'];?>
+								</div>
+							</div>
+						</div>
 					</div>
 					<?php
 					}	
