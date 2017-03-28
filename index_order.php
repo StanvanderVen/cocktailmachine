@@ -24,6 +24,11 @@
 
     <!-- Theme CSS -->
     <link href="css/creative.css" rel="stylesheet">
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script type="text/javascript" src="<?php echo $ruadmin ?>js/bootstrap.js"></script>
+	<script src="<?php echo $ruadmin ?>js/tablesorter/jquery.tablesorter.js"></script>
+	<script src="<?php echo $ruadmin ?>js/tablesorter/tables.js"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -141,15 +146,28 @@
 							<div>
 								&nbsp;
 							</div>
-							<div>
-								<input type="submit" name="order_cocktail" class = "btn btn-primary" ></input>
-								<button class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">More information</button>
-							</div>
+							
 						
-						<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-							<div class="modal-dialog modal-lg">
+						    <button type="button" class="btn btn-primary btn-large" data-toggle="modal" data-target="#myModal">More information</button>
+
+						<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="purchaseLabel" aria-hidden="true">
+							<div class="modal-dialog">
 								<div class="modal-content">
-									<?php echo $row['LongDescription'];?>
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+										<h4 class="modal-title" id="purchaseLabel">Purchase</h4>
+									</div>
+									<div class="modal-body">
+										<?php echo $row['ShortDescription'];?>
+										<?php echo $row['LongDescription'];?>
+										<div>
+											
+										</div>
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+										<button type="button" class="btn btn-primary" input type="submit" name="order_cocktail">Order</button>
+									</div>
 								</div>
 							</div>
 						</div>
