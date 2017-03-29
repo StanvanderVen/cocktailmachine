@@ -37,9 +37,9 @@ void loop() {
         
         //checks the amount of ingredients that are used
 <<<<<<< HEAD
-       for (int x = 0; x < 11; x=x+3) { //ten ingredients limit
-        if(DrinkCode[x] == 'A') { 
-            amountIngredients = amountIngredients + 1;
+       for (int x = 0; x < 11; x++) { //ten ingredients limit
+        if(DrinkCode[4*x] == 'A') { 
+            amountIngredients++;
           }
        }
         
